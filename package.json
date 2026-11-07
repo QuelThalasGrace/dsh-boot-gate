@@ -1,0 +1,48 @@
+{
+  "name": "dsh-boot-gate",
+  "version": "0.3.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "description": "Hold wallpaper playback (and hide it) until the boot animation finishes.",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  },
+  "scripts": {
+    "test": "node test/gate.test.mjs"
+  },
+  "files": [
+    "lib",
+    "test",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "license": "MIT",
+  "author": "QuelThalasGrace",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuelThalasGrace/dsh-boot-gate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/QuelThalasGrace/dsh-boot-gate/issues"
+  },
+  "homepage": "https://github.com/QuelThalasGrace/dsh-boot-gate#readme",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "wallpaper",
+    "startup",
+    "boot"
+  ]
+}
